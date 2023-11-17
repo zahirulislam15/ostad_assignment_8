@@ -20,7 +20,8 @@ class ProfileController extends Controller
             'access_token', '123-XYZ', 1, '/', $_SERVER['SERVER_NAME'], false, true
         );
 
-return $data;
+// return $data;
+        return response()->json(['data' => $data],200)->cookie($cookie);
 
     }
 }
