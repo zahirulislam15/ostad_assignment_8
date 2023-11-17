@@ -17,7 +17,13 @@ class ProfileController extends Controller
         ];
 
         $cookie = cookie(
-            'access_token', '123-XYZ', 1, '/', $_SERVER['SERVER_NAME'], false, true
+           $name = 'access_token',
+           $value = '123-XYZ',
+           $minutes = 1, 
+           $path = '/', 
+           $domain = $_SERVER['SERVER_NAME'],
+           $secure = false,
+           $httpOnly = true
         );
 
 // return $data;
